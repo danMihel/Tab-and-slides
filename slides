@@ -1,0 +1,58 @@
+function slider (abs,  rev, ext, arent,  otal,  ontainer ){
+
+let tabs = document.querySelectorAll(abs),
+    prev = document.querySelector(rev),
+    next = document.querySelector(ext),
+    carent = document.querySelector(arent),
+    total = document.querySelector(otal),
+    container = document.querySelector(ontainer),
+    tabIndex = 1;
+    
+
+    showTad(tabIndex);
+    if (tabs.length < 10) {
+      total.textContent = `0${tabs.length}`;
+  } else {
+      total.textContent = tabs.length;
+  }
+
+    function showTad(n){    
+      if(n > tabs.length) {
+        tabIndex = 1;
+      }
+
+      if (n < 1){
+        tabIndex = tabs.length;
+      }
+
+      tabs.forEach(i => i.classList.add('hide'));
+
+      tabs[tabIndex - 1].classList.remove('hide');
+
+        if (tabs.length < 10) {
+          carent.textContent = `0${tabIndex}`;
+        } else {
+        carent.textContent = tabIndex;
+        }
+      }
+
+    function pluseTab(n) {
+        showTad(tabIndex += n);
+        
+    }
+    
+    container.addEventListener('click', () => {
+      pluseTab(1);
+    });
+
+    prev.addEventListener('click', () => {
+        pluseTab(-1);
+    });
+    
+    next.addEventListener('click', () => {
+        pluseTab(1);
+        
+    });
+  };
+
+  slider ('.tabs', '.left', '.right', '#carent', '#total', '.container' );
