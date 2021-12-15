@@ -37,8 +37,7 @@ let tabs = document.querySelectorAll(abs),
       }
 
     function pluseTab(n) {
-        showTad(tabIndex += n);
-        
+        showTad(tabIndex += n);    
     }
     
     container.addEventListener('click', () => {
@@ -50,8 +49,7 @@ let tabs = document.querySelectorAll(abs),
     });
     
     next.addEventListener('click', () => {
-        pluseTab(1);
-        
+        pluseTab(1);  
     });
   };
 
