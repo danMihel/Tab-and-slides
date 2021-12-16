@@ -1,11 +1,11 @@
-function slider (tabs,  prev, next, carent,  total,  container ){
+function slider (tabsSelector,  prevSelector, nextSelector, carentSelector,  totalSelector,  containerSelector ){
 
-let tabs = document.querySelectorAll(tabs),
-    prev = document.querySelector(prev),
-    next = document.querySelector(next),
-    carent = document.querySelector(carent),
-    total = document.querySelector(total),
-    container = document.querySelector(container),
+let tabs = document.querySelectorAll(tabsSelector),
+    prev = document.querySelector(prevSelector),
+    next = document.querySelector(nextSelector),
+    carent = document.querySelector(carentSelector),
+    total = document.querySelector(totalSelector),
+    container = document.querySelector(containerSelector),
     tabIndex = 1;
     
 
